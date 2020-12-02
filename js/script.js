@@ -12,29 +12,5 @@ if (playerInput == '1') {
     playerMove = 'nożyce';
 }
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-let computerMove = 'nieznany ruch';
-if (randomNumber == 1) {
-    computerMove = 'kamień';
-} else if (randomNumber == 1) {
-    computerMove = 'papier';
-} else {
-    computerMove = 'papier'
-}
-printMessage('Ty dałeś: ' + playerMove + '<br> Komputer dał: ' + computerMove)
 
-if (computerMove == 'kamień' && playerMove == 'papier') {
-    printMessage('Ty wygrywasz!');
-} else if (computerMove == 'papier' && playerMove == 'nożyce') {
-    printMessage('Ty wygrywasz!');
-} else if (computerMove == 'nożyce' && playerMove == 'kamień') {
-    printMessage('Ty wygrywasz!');
-} else if (computerMove == 'papier' && playerMove == 'kamień') {
-    printMessage('Wygrywa komputer!');
-} else if (computerMove == 'nożyce' && playerMove == 'papier') {
-    printMessage('Wygrywa komputer!');
-} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
-    printMessage('Wygrywa komputer!');
-} else {
-    printMessage('REMIS!');
-}
+printMessage('Twój ruch to: ' + playerMove);
