@@ -38,18 +38,18 @@ let computerMove = getMoveName(randomNumber);
 function displayResults(argComputerMove, argPlayerMove) {
     printMessage('Ty dałeś: ' + argPlayerMove + '<br> Komputer dał: ' + argComputerMove);
     if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-        return 'Ty wygrywasz!';
+        printMessage('Ty wygrywasz!');
     } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-        return 'Ty wygrywasz!';
+        printMessage('Ty wygrywasz!');
     } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-        return 'Ty wygrywasz!';
+        printMessage('Ty wygrywasz!');
     } else if (argComputerMove == argPlayerMove) {
-        return 'REMIS!';
+        printMessage('REMIS!');
     } else {
-        return 'Wygrywa komputer!'
+        printMessage('Wygrywa komputer!')
     }
 }
-printMessage(displayResults(computerMove, playerMove));
+displayResults(computerMove, playerMove);
 /* if (computerMove == 'kamień' && playerMove == 'papier') {
     printMessage('Ty wygrywasz!');
 } else if (computerMove == 'papier' && playerMove == 'nożyce') {
