@@ -1,3 +1,6 @@
+let computerWins = 0;
+let playerWins = 0;
+
 function playGame(playerInput) {
     clearMessages();
     /*     let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
@@ -37,17 +40,21 @@ function playGame(playerInput) {
     } */
 
     function displayResults(argComputerMove, argPlayerMove) {
-        printMessage('Ty dałeś: ' + argPlayerMove + '<br> Komputer dał: ' + argComputerMove);
+        printMessage('<br> Ty dałeś: ' + argPlayerMove + '<br> Komputer dał: ' + argComputerMove);
         if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-            printMessage('Ty wygrywasz!');
+            printMessage('<br>TY WYGRYWASZ!')
+            return playerWins++;
         } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
-            printMessage('Ty wygrywasz!');
+            printMessage('<br>TY WYGRYWASZ!')
+            return playerWins++;
         } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
-            printMessage('Ty wygrywasz!');
+            printMessage('<br>TY WYGRYWASZ!')
+            return playerWins++;
         } else if (argComputerMove == argPlayerMove) {
-            printMessage('REMIS!');
+            printMessage('<br>REMIS!');
         } else {
-            printMessage('Wygrywa komputer!')
+            printMessage('<br>WYGRYWA KOMPUTER! ')
+            return computerWins++;
         }
     }
     displayResults(computerMove, playerMove);
@@ -66,7 +73,7 @@ function playGame(playerInput) {
     } else {
         printMessage('REMIS!');
     } */
-
+    printMessage('<br>Twoje wygrane: ' + playerWins + '<br> Wygrane komputera: ' + computerWins);
 }
 document.getElementById('play-rock').addEventListener('click', function () {
     playGame('1');

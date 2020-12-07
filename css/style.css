@@ -1,0 +1,19 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2c2c54;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 30px;
+  margin: auto;
+  text-align: center;
+  font-size: 55px;
+}
+/*# sourceMappingURL=style.css.map */
